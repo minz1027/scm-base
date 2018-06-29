@@ -8,7 +8,7 @@ jobs:
             SD_SONAR_OPTS: "-Dsonar.sources=index.js -Dsonar.language=js"
         steps:
             - echo: echo $SONAR_OPTS
-            - hab: ls /opt/hab
+            - hab: ls /hab/pkgs
             - install: npm install
             - test: npm test || true
             - sonar-test-results-formatter: node_modules/.bin/mocha --reporter mocha-sonarqube-reporter test --reporter-options output=sonar/xunit.xml || true
