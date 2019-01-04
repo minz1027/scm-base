@@ -4,7 +4,7 @@ shared:
 jobs:
     main:
         requires: [~pr, ~commit]
-        environment:
-            SD_SONAR_OPTS: "-Dsonar.sources=index.js -Dsonar.language=js"
         steps:
-            - meta: meta set meta.summary.coverage "99"
+        - meta: |
+            meta set meta.summary.coverage "Coverage increased by 90%"
+            meta set meta.summary.markdown "this markdown comment is **bold** and *italic* meow"
