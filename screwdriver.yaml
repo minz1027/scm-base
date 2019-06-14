@@ -1,6 +1,6 @@
 shared:
-    image: node:8
-
+    image: nonsense
+    
 jobs:
     main:
         requires: [~pr, ~commit]
